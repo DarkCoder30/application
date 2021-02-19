@@ -1,0 +1,27 @@
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+	<h1 class="display-4">Наши товары:</h1>
+</div>
+<div class="flex-products">
+	{{#if products.length}}
+	{{#each products}}
+	<div class="card mt-5 mb-5" style="width: 300px; heigth: 400px;">
+		<img  src="{{url}}" class="card-img-top" alt="{{title}}">
+		<div class="card-body">
+			<h5 class="card-title">{{title}}</h5>
+			<p class="card-text">Цена: <span class="price">{{ price }}</span></p>
+			<hr>
+			<a href="/products/{{id}}" class="btn btn-primary">Подробнее о товаре</a>
+			<hr>
+			<a href="/products/{{id}}/edit?allow=true" class="btn btn-info">Редактировать товар</a>
+			<hr>
+			<form action="/card/add" method="POST">
+			<input type="hidden" name="id" value="{{ id }}">
+			<button type="submit" class="btn btn-success">Купить</button>
+			</form>
+		</div>
+	</div>
+	{{/each}}
+	{{else}}
+	<p class="lead"><span class="text-danger">Товаров пока нету.</span></p>
+	{{/if}}
+</div>

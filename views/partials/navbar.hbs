@@ -1,0 +1,39 @@
+<nav class="my-2 my-md-0 me-md-3 flex-nav">
+
+	{{#if isHome}}
+	<a class="p-2 text-success" href="/">Главная</a>
+	{{else}}
+	<a class="p-2 text-dark" href="/">Главная</a>
+	{{/if}}
+
+	{{#if isProducts}}
+	<a class="p-2 text-success" href="/products">Наши товары</a>
+	{{else}}
+	<a class="p-2 text-dark" href="/products">Наши товары</a>
+	{{/if}}
+
+	{{#if isAdd}}
+	<a class="p-2 text-success" href="/add">Добавить товар</a>
+	{{else}}
+	<a class="p-2 text-dark" href="/add">Добавить товар</a>
+	{{/if}}
+
+	{{#if isAbout}}
+	<a class="p-2 text-success" href="about">О нас</a>
+	{{else}}
+	<a class="p-2 text-dark" href="about">О нас</a>
+	{{/if}}
+
+	{{#if isContacts}}
+	<a class="p-2 text-success" href="contacts">Наши контакты</a>
+	{{else}}
+	<a class="p-2 text-dark" href="contacts">Наши контакты</a>
+	{{/if}}
+
+	{{#if isCard}}
+	<a class="p-2 text-success" href="card">Корзина</a>
+	{{else}}
+	<a class="p-2 text-dark" href="card">Корзина</a>
+	{{/if}}
+
+</nav>
